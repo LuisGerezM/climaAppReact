@@ -1,0 +1,16 @@
+.row-principal {
+  width: 100%;
+  height: 30rem;
+}
+
+.alert {
+  border-radius: 1rem !important;
+}
+
+.google-btn {
+  border-radius: 1rem !important;
+}
+
+.google-btn > div {
+  border-radius: 1rem !important;
+}

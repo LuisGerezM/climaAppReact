@@ -1,0 +1,34 @@
+.tittle-nav {
+  color: white;
+}
+
+.tittle-nav:hover {
+  color: #6c757d;
+}
+
+.welcome {
+  color: white;
+  font-weight: bold;
+  font-size: "20px";
+}
+
+.welcome:hover {
+  cursor: grabbing;
+  color: #6c757d;
+}
+
+#basic-nav-dropdown {
+  color: white;
+}
+
+.dropdown-menu.show {
+  background-color: #d3d3d3;
+}
+
+.nav-item.dropdown {
+  margin-top: 6px;
+}
+
+.dropdown-toggle::after {
+  opacity: 0;
+}
