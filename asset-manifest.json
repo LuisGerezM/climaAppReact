@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/climaAppReact/static/css/main.ba3b83e5.chunk.css",
-    "main.js": "/climaAppReact/static/js/main.8aeb0061.chunk.js",
-    "main.js.map": "/climaAppReact/static/js/main.8aeb0061.chunk.js.map",
+    "main.js": "/climaAppReact/static/js/main.357542d5.chunk.js",
+    "main.js.map": "/climaAppReact/static/js/main.357542d5.chunk.js.map",
     "runtime-main.js": "/climaAppReact/static/js/runtime-main.ada7174c.js",
     "runtime-main.js.map": "/climaAppReact/static/js/runtime-main.ada7174c.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/climaAppReact/static/css/2.4c97ca4f.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.e8c8618b.chunk.js",
     "static/css/main.ba3b83e5.chunk.css",
-    "static/js/main.8aeb0061.chunk.js"
+    "static/js/main.357542d5.chunk.js"
   ]
 }
