@@ -85,7 +85,6 @@ export default function Dashboard() {
 
   const handleInputChange = (event) => {
     if (event.target.value !== "") {
-      console.log(event.target.value);
       setDisabledBtn(false);
       setDatos({
         ...datos,
