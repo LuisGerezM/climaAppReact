@@ -48,7 +48,4 @@ export default function Login() {
     </Container>
   );
 }
-/* Login antiguo
 
-
-*/
