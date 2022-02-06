@@ -24,20 +24,26 @@ function NavbarComponent() {
           </div>
         </nav>
       ) : (
-        <Navbar variant="dark" bg="primary" expand="lg">
-          <Navbar.Brand className="col-md-4" href="#">
+        <Navbar
+          variant="dark"
+          bg="primary"
+          expand="lg"
+          className="d-flex justify-content-around"
+        >
+          <Navbar.Brand className="col col-md-2 col-lg-5" href="#">
             Busca el Clima
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="col-md-12 my-auto justify-content-center">
-              <Nav className="welcome col-md-9 my-md-auto mt-3 justify-content-md-start navbar-nav text-center">
-                {" "}
-                Bienvenido {user?.displayName ? user.displayName : "Cargado..."}
+            <Nav className="col-md-12 my-auto d-flex flex-row justify-content-lg-start justify-content-end">
+              <Nav className="welcome col-sm-11 col-md-7 justify-content-md-start col-lg-9 my-md-auto mt-3  navbar-nav text-center">
+                {user.displayName
+                  ? `Bienvenido ${user.displayName}`
+                  : "Cargado..."}
               </Nav>
               <NavDropdown
                 title={navDropdownImage}
-                className="col-md-2 ml-3 my-auto imagen text-center nav-item dropdown"
+                className="col-md-3 ml-5 my-auto imagen text-center nav-item dropdown"
                 variant="outline-primary"
               >
                 <NavDropdown.Item>

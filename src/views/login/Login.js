@@ -3,7 +3,6 @@ import React, { useEffect, useContext, useState } from "react";
 import { signInWithGoogle } from "../../services/firebase";
 import { AuthContext } from "../../contexts/firebase/AuthProvider";
 import { Redirect } from "react-router-dom";
-
 import GoogleButton from "react-google-button";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 
@@ -48,4 +47,3 @@ export default function Login() {
     </Container>
   );
 }
-
