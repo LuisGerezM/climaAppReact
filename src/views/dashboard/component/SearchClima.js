@@ -27,7 +27,6 @@ const SearchClima = ({ loadingClima, resultClima, clima }) => {
           setViewAlertError(false);
         }, 3000);
       } else {
-        console.log("clima:", clima);
         const {
           name,
           main: { temp, temp_max, temp_min },
@@ -42,7 +41,7 @@ const SearchClima = ({ loadingClima, resultClima, clima }) => {
         setLoadingData(true);
       }
     }
-  }, [loadingClima]);
+  }, [loadingClima, clima]);
 
   useEffect(() => {
     if (loadingData) {
@@ -71,16 +70,16 @@ const SearchClima = ({ loadingClima, resultClima, clima }) => {
     <>
       {loadingClima ? (
         <div className="col col-12">
-          <div class="sk-cube-grid mt-md-5 mb-md-5">
-            <div class="sk-cube sk-cube1"></div>
-            <div class="sk-cube sk-cube2"></div>
-            <div class="sk-cube sk-cube3"></div>
-            <div class="sk-cube sk-cube4"></div>
-            <div class="sk-cube sk-cube5"></div>
-            <div class="sk-cube sk-cube6"></div>
-            <div class="sk-cube sk-cube7"></div>
-            <div class="sk-cube sk-cube8"></div>
-            <div class="sk-cube sk-cube9"></div>
+          <div className="sk-cube-grid mt-md-5 mb-md-5">
+            <div className="sk-cube sk-cube1"></div>
+            <div className="sk-cube sk-cube2"></div>
+            <div className="sk-cube sk-cube3"></div>
+            <div className="sk-cube sk-cube4"></div>
+            <div className="sk-cube sk-cube5"></div>
+            <div className="sk-cube sk-cube6"></div>
+            <div className="sk-cube sk-cube7"></div>
+            <div className="sk-cube sk-cube8"></div>
+            <div className="sk-cube sk-cube9"></div>
           </div>
         </div>
       ) : showError ? (
@@ -98,7 +97,7 @@ const SearchClima = ({ loadingClima, resultClima, clima }) => {
         </>
       ) : (
         showData && (
-          <div className="mb-2">
+          <div className="mb-2 col-md-12">
             <h2 className="result mt-4 text-center"> Clima en {name}</h2>
             <h1 className="result mt-2 d-flex justify-content-center ">
               {centigrados} &#8451;

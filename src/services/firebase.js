@@ -22,7 +22,7 @@ export const signInWithGoogle = () => {
       //console.log(res.user);
     })
     .catch((error) => {
-      console.log(error.message);
+      console.log("Error sign in with google: ", error.message);
     });
 };
 

@@ -5,7 +5,7 @@ import SelectPais from "./component/SelectPais";
 import apiCall from "../../api";
 import SearchClima from "./component/SearchClima";
 import "./styleDashboard.css";
-import { Button, Alert } from "react-bootstrap";
+import { Button, Alert, Form } from "react-bootstrap";
 
 export default function Dashboard() {
   const userGoogle = useContext(AuthContext);
@@ -17,7 +17,7 @@ export default function Dashboard() {
     pais: "",
   });
 
-  const [apiClima, setApiClima] = useState(false);
+  // const [apiClima, setApiClima] = useState(false);
   const [loadingClima, setLoadingClima] = useState(false);
   const [resultClima, setResultClima] = useState(false);
   const [clima, setClima] = useState(null);
@@ -37,51 +37,19 @@ export default function Dashboard() {
       setLoadingPaises(true);
       try {
         const paisesResult = await apiCall({
-          url: "https://restcountries.eu/rest/v2/all",
-          method: "get",
+          url: "https://restcountries.com/v3.1/all",
         });
         setPaises(paisesResult);
-        //console.log('paisesResult', paisesResult)
       } catch (error) {
-        // console.log(error);
         console.log("Algo salió mal. Revisa tu conexión");
       } finally {
         setLoadingPaises(false);
       }
     };
     getPaises().catch(null);
+
+    return () => {};
   }, []);
-
-  useEffect(() => {
-    const { ciudad, pais } = datos;
-
-    const getClima = async () => {
-      setLoadingClima(true);
-      try {
-        const { ciudad, pais } = datos;
-        const apiClima = "0eca7da4f9c99ccfa4a6f8100dd392d1";
-        const urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiClima}`;
-        const climaResult = await apiCall({
-          url: urlSearch,
-          method: "get",
-        });
-        setClima(climaResult);
-      } catch (error) {
-        console.log("Algo salió mal. Revisa tu conexión");
-      } finally {
-        setLoadingClima(false);
-      }
-    };
-
-    if (ciudad !== "" && pais !== "") {
-      getClima().catch(null);
-    }
-
-    return () => {
-      setApiClima(false);
-      setClima(null);
-    };
-  }, [apiClima]);
 
   const handleInputChange = (event) => {
     if (event.target.value !== "") {
@@ -102,6 +70,24 @@ export default function Dashboard() {
     });
   };
 
+  const getClima = async () => {
+    setLoadingClima(true);
+    try {
+      const { ciudad, pais } = datos;
+      const apiClima = process.env.REACT_APP_API_KEY_CLIMA;
+      const urlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiClima}`;
+      const climaResult = await apiCall({
+        url: urlSearch,
+        method: "get",
+      });
+      setClima(climaResult);
+    } catch (error) {
+      console.log("Algo salió mal. Revisa tu conexión");
+    } finally {
+      setLoadingClima(false);
+    }
+  };
+
   const enviarDatos = (event) => {
     event.preventDefault();
 
@@ -110,7 +96,7 @@ export default function Dashboard() {
 
     if (ciudad !== "" && pais !== "") {
       setResultClima(true);
-      setApiClima(true);
+      getClima().catch(null);
     } else {
       setValueInput(true);
       setTimeout(() => {
@@ -135,10 +121,7 @@ export default function Dashboard() {
           clima={clima}
         />
 
-        <form
-          className="col col-12 col-md-8 d-flex align-items-center flex-wrap flex-column mt-md-4"
-          onSubmit={enviarDatos}
-        >
+        <Form onSubmit={enviarDatos}>
           <div className="col-md-12 mb-4">
             {valueInput && (
               <Alert variant="danger mt-4 d-flex justify-content-center">
@@ -171,7 +154,7 @@ export default function Dashboard() {
               Obtener Clima
             </Button>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-export default async function apiCall({ url, method, body, headers }) {
+export default async function apiCall({ url, method = 'GET', body, headers }) {
   try {
     const response = await fetch(url, {
       method,
