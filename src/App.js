@@ -5,12 +5,10 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-//import "./App.css";
-import NavbarComponent from "./components/NavbarComponent";
+import NavbarComponent from "./components/navbar/NavbarComponent";
 import Login from "./views/login/Login";
 import Dashboard from "./views/dashboard/Dashboard";
 import AuthContext from "./contexts/firebase/AuthProvider";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -18,17 +16,15 @@ function App() {
     <AuthContext>
       <Router>
         <NavbarComponent />
-        <div className="App">
-          <Switch>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/">
-              <Dashboard />
-            </Route>
-            <Redirect from="/" to="/login" />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+          <Redirect from="/" to="/login" />
+        </Switch>
       </Router>
     </AuthContext>
   );

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Navbar, NavDropdown, Button, Image, Nav } from "react-bootstrap";
-import ImagenUser from "../assets/img/userImg.png";
-import { AuthContext } from "../contexts/firebase/AuthProvider";
-import { logOut } from "../services/firebase";
+import ImagenUser from "../../assets/img/userImg.png";
+import { AuthContext } from "../../contexts/firebase/AuthProvider";
+import { logOut } from "../../services/firebase";
 import "./styleNav.css";
 
 function NavbarComponent() {

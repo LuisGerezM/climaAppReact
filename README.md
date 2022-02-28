@@ -1,7 +1,21 @@
 # Proyecto creado para conocer el Clima
 
-#### Se trata de un proyecto en el que pongo en práctica los conocimientos que estoy adquiriendo del mundo React.
-### Proyecto creado usando: React Hooks, React Router, React Context, Fetch, Google Sign-In con Firebase, React-Bootstrap, dotenv(módulo de dependencia para el uso de variables de entorno).  
-### Apis: Búsqueda de Países (https://restcountries.eu), Búsqueda de Clima (https://api.openweathermap.org/).
+## APIS consultadas:
+- API Países:
+https://restcountries.eu  
+
+- API Clima
+https://api.openweathermap.org
+
+#### Se trata de un proyecto en el que pongo en práctica los conocimientos que estoy adquiriendo al trabajar con la biblioteca React.
+
+#### Proyecto creado usando: 
+    ● React Hook.
+    ● React Router DOM v5
+    ● API Context
+    ● API Fetch
+    ● Autenticación con Firebase - Google Sign-In
+    ● React-Bootstrap
+    ● dotenv
 
 ### https://luisgerezm.github.io/climaAppReact/
