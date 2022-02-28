@@ -17,5 +17,3 @@ https://api.openweathermap.org
     ● Autenticación con Firebase - Google Sign-In
     ● React-Bootstrap
     ● dotenv
-
-### https://luisgerezm.github.io/climaAppReact/
