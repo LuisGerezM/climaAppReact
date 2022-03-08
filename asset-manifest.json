@@ -1,26 +1,24 @@
 {
   "files": {
-    "main.css": "/climaAppReact/static/css/main.ba3b83e5.chunk.css",
-    "main.js": "/climaAppReact/static/js/main.357542d5.chunk.js",
-    "main.js.map": "/climaAppReact/static/js/main.357542d5.chunk.js.map",
-    "runtime-main.js": "/climaAppReact/static/js/runtime-main.ada7174c.js",
-    "runtime-main.js.map": "/climaAppReact/static/js/runtime-main.ada7174c.js.map",
+    "main.css": "/climaAppReact/static/css/main.bd58e832.chunk.css",
+    "main.js": "/climaAppReact/static/js/main.ab70465e.chunk.js",
+    "main.js.map": "/climaAppReact/static/js/main.ab70465e.chunk.js.map",
+    "runtime-main.js": "/climaAppReact/static/js/runtime-main.b8505479.js",
+    "runtime-main.js.map": "/climaAppReact/static/js/runtime-main.b8505479.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/climaAppReact/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.e8c8618b.chunk.js": "/climaAppReact/static/js/2.e8c8618b.chunk.js",
-    "static/js/2.e8c8618b.chunk.js.map": "/climaAppReact/static/js/2.e8c8618b.chunk.js.map",
-    "static/js/3.4009d28f.chunk.js": "/climaAppReact/static/js/3.4009d28f.chunk.js",
-    "static/js/3.4009d28f.chunk.js.map": "/climaAppReact/static/js/3.4009d28f.chunk.js.map",
+    "static/js/2.6e94afa6.chunk.js": "/climaAppReact/static/js/2.6e94afa6.chunk.js",
+    "static/js/2.6e94afa6.chunk.js.map": "/climaAppReact/static/js/2.6e94afa6.chunk.js.map",
     "index.html": "/climaAppReact/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/climaAppReact/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.ba3b83e5.chunk.css.map": "/climaAppReact/static/css/main.ba3b83e5.chunk.css.map",
-    "static/js/2.e8c8618b.chunk.js.LICENSE.txt": "/climaAppReact/static/js/2.e8c8618b.chunk.js.LICENSE.txt",
+    "static/css/main.bd58e832.chunk.css.map": "/climaAppReact/static/css/main.bd58e832.chunk.css.map",
+    "static/js/2.6e94afa6.chunk.js.LICENSE.txt": "/climaAppReact/static/js/2.6e94afa6.chunk.js.LICENSE.txt",
     "static/media/userImg.bf28321f.png": "/climaAppReact/static/media/userImg.bf28321f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ada7174c.js",
+    "static/js/runtime-main.b8505479.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.e8c8618b.chunk.js",
-    "static/css/main.ba3b83e5.chunk.css",
-    "static/js/main.357542d5.chunk.js"
+    "static/js/2.6e94afa6.chunk.js",
+    "static/css/main.bd58e832.chunk.css",
+    "static/js/main.ab70465e.chunk.js"
   ]
 }
