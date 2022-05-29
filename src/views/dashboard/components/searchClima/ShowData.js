@@ -1,6 +1,8 @@
 import React from "react";
 
-const ShowData = ({ name, centigrados, max, min, wind }) => {
+const ShowData = ({
+  weatherInformation: { name, centigrados, max, min, wind },
+}) => {
   return (
     <div className="mb-2 col-md-12">
       <h2 className="result mt-4 text-center"> Clima en {name}</h2>

@@ -6,9 +6,10 @@ import {
   Redirect,
 } from "react-router-dom";
 import NavbarComponent from "./components/navbar/NavbarComponent";
-import Login from "./views/login/Login";
 import Dashboard from "./views/dashboard/Dashboard";
 import AuthContext from "./contexts/firebase/AuthProvider";
+import Login from "./views/login/Login";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

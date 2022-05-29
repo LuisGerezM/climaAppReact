@@ -12,6 +12,7 @@ function NavbarComponent() {
     <Image
       src={`${user ? user?.photoURL : ImagenUser} `}
       style={{ width: "60px", height: "40px", borderRadius: "50%" }}
+      alt="User Image"
     />
   );
 
@@ -35,7 +36,7 @@ function NavbarComponent() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="col-md-12 my-auto d-flex flex-row justify-content-lg-start justify-content-end">
+            <Nav className="col-md-12 d-flex flex-row justify-content-lg-start justify-content-end">
               <Nav className="welcome col-sm-11 col-md-7 justify-content-md-start col-lg-9 my-md-auto mt-3  navbar-nav text-center">
                 {user.displayName
                   ? `Bienvenido ${user.displayName}`

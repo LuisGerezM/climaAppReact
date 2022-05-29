@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { auth } from "../../services/firebase";
+import { adapterUser } from "../../views/login/adapters/adapterUser";
 
 export const AuthContext = createContext({ user: null });
 
@@ -9,7 +10,8 @@ function AuthProvider(props) {
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
-        const { displayName, email, photoURL } = user;
+        const { displayName, email, photoURL } = adapterUser(user);
+
         setUserGoogle({
           displayName,
           email,
@@ -21,6 +23,7 @@ function AuthProvider(props) {
     });
 
     return () => {
+      console.log("desmontando efecto [] - contexto");
       setUserGoogle(null);
     };
   }, []);
